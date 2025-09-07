@@ -4,7 +4,7 @@ from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 
-api_key = 'AIzaSyDThUorg68gXA6gN7ohTIcDFd3OVkWhk70'
+api_key = '' # this key is private
 persist_directory = 'chroma_db'
 #Step 1: Parse .docx and Extract Email Chunks
 
@@ -77,3 +77,4 @@ folder_path = "convo mails"
 all_chunks = process_docx_folder(folder_path)
 texts, metadatas = flatten_chunks(all_chunks)
 vectordb = get_vector_store(texts,metadatas,api_key,persist_directory)
+
