@@ -8,7 +8,7 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Config
-api_key = "AIzaSyDThUorg68gXA6gN7ohTIcDFd3OVkWhk70" 
+api_key = "" #this key is private 
 persist_directory = "chroma_db"
 
 # Setup embedding + vectorstore
@@ -65,4 +65,5 @@ def generate_response():
     return jsonify({"reply": result['result']})
 
 if __name__ == '__main__':
+
     app.run(debug=True)
