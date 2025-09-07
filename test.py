@@ -3,7 +3,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 import torch
 from bert_score import score
 
-api_key = "AIzaSyDThUorg68gXA6gN7ohTIcDFd3OVkWhk70" 
+api_key = "" #this key is private 
 
 def evaluate_rag_output(generated_answer: str, reference_answer: str, api_key: str) -> float:
     # Initialize Gemini Embeddings
@@ -34,6 +34,7 @@ P, R, F1 = score([generated], [reference], lang="en", verbose=True)
 print(f"BERTScore Precision: {P.mean().item():.4f}")
 print(f"BERTScore Recall: {R.mean().item():.4f}")
 print(f"BERTScore F1: {F1.mean().item():.4f}")
+
 
 
 
